@@ -57,12 +57,13 @@ class ArticlesControllerTest extends IntegrationTestCase{
     }
 
     public function testView(){
-        $this->post('/articles/view', ['id' => 1]);
-        $this->assertResponseNotEmpty();
+        $this->get('/articles/view/1');
+        $this->assertResponseSuccess();
     }
     
     public function testDelete(){
-        $this->post(['id' => 1]);
+        $this->post('/articles');
         $this->assertResponseSuccess();
+        //$this->assertRedirect(['controller' => 'Articles', 'action' => 'index']);
     }
 }

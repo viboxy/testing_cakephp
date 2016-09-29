@@ -18,7 +18,6 @@ class ArticlesTable extends Table{
             ->requirePresence('title')
             ->notEmpty('body')
             ->requirePresence('body');
-        echo $validator->count();
         return $validator;
     }
 

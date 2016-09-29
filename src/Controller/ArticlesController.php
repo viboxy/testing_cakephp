@@ -36,7 +36,6 @@ class ArticlesController extends AppController{
 
     public function view($id = null){
         $article = $this->Articles->get($id);
-        echo $article;
         $this->set(compact('article'));
     }
     
