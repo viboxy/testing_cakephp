@@ -52,7 +52,6 @@ class ArticlesControllerTest extends IntegrationTestCase{
         ];
         $this->post('/articles/add', $data);
         $this->assertResponseSuccess();
-        //$articles = new ArticlesController();
         $this->assertRedirect(['controller' => 'Articles', 'action' => 'index']);
         $this->assertRedirectContains('/articles');
     }
@@ -60,5 +59,10 @@ class ArticlesControllerTest extends IntegrationTestCase{
     public function testView(){
         $this->post('/articles/view', ['id' => 1]);
         $this->assertResponseNotEmpty();
+    }
+    
+    public function testDelete(){
+        $this->post(['id' => 1]);
+        $this->assertResponseSuccess();
     }
 }

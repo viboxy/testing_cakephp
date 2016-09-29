@@ -5,6 +5,7 @@
         <th>Id</th>
         <th>Title</th>
         <th>Created</th>
+        <th>Action</th>
     </tr>
 
     <?php foreach ($articles as $article):?>
@@ -14,6 +15,13 @@
         </td>
         <td>
             <?= $article->created->format(DATE_RFC850) ?>
+        </td>
+        <td>
+            <?= $this->Form->postLink(
+                'Delete',
+                ['action' => 'delete', $article->id],
+                ['confirm' => 'Are you sure'])
+            ?>
         </td>
     <?php endforeach;?>
 </table>

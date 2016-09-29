@@ -1,8 +1,10 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
+use App\Model\Table\ArticlesTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
+use Cake\Validation\Validator;
 
 class ArticlesTableTest extends TestCase{
     public $fixtures = ['app.articles'];
@@ -21,5 +23,12 @@ class ArticlesTableTest extends TestCase{
             ['id' => 2, 'title' => 'Second Article']
         ];
         $this->assertEquals($expected, $result);
+    }
+    
+    public function testValidationDefault(){
+        $this->ArticlesTable = new ArticlesTable();
+        $validator = new Validator();
+        $result = $this->ArticlesTable->validationDefault($validator);
+        $this->assertEquals(2, $result->count());
     }
 }
