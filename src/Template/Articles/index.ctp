@@ -9,19 +9,21 @@
     </tr>
 
     <?php foreach ($articles as $article):?>
-        <td><?= $article->id ?></td>
-        <td>
-            <?= $this->Html->link($article->title, ['action' => 'view', $article->id]) ?>
-        </td>
-        <td>
-            <?= $article->created->format(DATE_RFC850) ?>
-        </td>
-        <td>
-            <?= $this->Form->postLink(
-                'Delete',
-                ['action' => 'delete', $article->id],
-                ['confirm' => 'Are you sure'])
-            ?>
-        </td>
+        <tr>
+            <td><?= $article->id ?></td>
+            <td>
+                <?= $this->Html->link($article->title, ['action' => 'view', $article->id]) ?>
+            </td>
+            <td>
+                <?= $article->created->format(DATE_RFC850) ?>
+            </td>
+            <td>
+                <?= $this->Form->postLink(
+                    'Delete',
+                    ['action' => 'delete', $article->id],
+                    ['confirm' => 'Are you sure'])
+                ?>
+            </td>
+        </tr>
     <?php endforeach;?>
 </table>
