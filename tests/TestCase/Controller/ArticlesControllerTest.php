@@ -69,9 +69,13 @@ class ArticlesControllerTest extends IntegrationTestCase{
     }
 
     public function testEdit(){
-        $this->post('/articles/edit/1', ['id' => 1]);
+        $this->post('/articles/edit/1', [
+            'id' => 1, 
+            'title' => 'Second Article',
+            'body' => 'Second Article body'
+        ]);
         $this->assertResponseSuccess();
-        $this->assertResponseCode(200);
-        //$this->assertRedirect(['controller' => 'Articles', 'action' => 'index']);
+        $this->assertRedirect(['controller' => 'Articles', 'action' => 'index']);
+        $this->assertHeader('Content-Type', 'text/html; charset=UTF-8');
     }
 }

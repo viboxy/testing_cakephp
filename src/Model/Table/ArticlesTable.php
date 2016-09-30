@@ -21,7 +21,7 @@ class ArticlesTable extends Table{
         return $validator;
     }
 
-    public function findPublished(Query $query, array $options){
+    public function findPublished(Query $query){
         $query->where([
             $this->alias().'.published' => 1
         ]);
