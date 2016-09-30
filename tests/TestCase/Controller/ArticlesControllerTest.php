@@ -62,7 +62,9 @@ class ArticlesControllerTest extends IntegrationTestCase{
     }
     
     public function testDelete(){
-        $this->post('/articles/delete', ['id' => 1]);
+        //$article = $this->Articles->get(1);
+        //echo $article;
+        $this->post('/articles/delete/1', ['id' => 1]);
         $this->assertResponseSuccess();
         //$this->assertRedirect(['controller' => 'Articles', 'action' => 'index']);
     }
