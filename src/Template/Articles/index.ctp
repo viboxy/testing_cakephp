@@ -18,6 +18,7 @@
                 <?= $article->created->format(DATE_RFC850) ?>
             </td>
             <td>
+                <?= $this->Html->link('Edit', ['action' => 'edit', $article->id]) ?>
                 <?= $this->Form->postLink(
                     'Delete',
                     ['action' => 'delete', $article->id],

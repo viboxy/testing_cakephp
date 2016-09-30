@@ -60,4 +60,17 @@ class ArticlesController extends AppController{
             return $this->redirect(['action' => 'index']);
         }
     }
+    
+    public function edit($id = null){
+        $article = $this->Articles->get($id);
+        if($this->request->is(['post', 'put'])){
+            $this->Articles->patchEntity($article, $this->request->data);
+            if($this->Articles->save($article)){
+                $this->Flash->success(__('Article has been updated'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Unable to update the article'));
+        }
+        $this->set('article', $article);
+    }
 }

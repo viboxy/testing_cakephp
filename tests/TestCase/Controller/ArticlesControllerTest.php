@@ -66,6 +66,6 @@ class ArticlesControllerTest extends IntegrationTestCase{
         //echo $article;
         $this->post('/articles/delete/1', ['id' => 1]);
         $this->assertResponseSuccess();
-        //$this->assertRedirect(['controller' => 'Articles', 'action' => 'index']);
+        //$this->assertRedirect(['controller' => 'Articles', 'action' => 'add']);
     }
 }
