@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b6dea88-8f4f-4509-ae31-4b5fca633e62" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/Helper/CurrencyRendererHelper.php" afterPath="$PROJECT_DIR$/src/View/Helper/CurrencyRendererHelper.php" />
     </list>
     <ignored path="testing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -493,12 +492,12 @@
       <workItem from="1475038254317" duration="25364000" />
       <workItem from="1475121092768" duration="29956000" />
       <workItem from="1475209855320" duration="20205000" />
-      <workItem from="1475467565029" duration="1476000" />
+      <workItem from="1475467565029" duration="1849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77001000" />
+    <option name="totallyTimeSpent" value="77374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="52" width="939" height="1028" extended-state="4" />
